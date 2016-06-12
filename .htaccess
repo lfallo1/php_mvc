@@ -1,0 +1,8 @@
+# Turn mod_rewrite on
+RewriteEngine On
+
+RewriteBase /projectmvc
+
+# base/this-is-my-query-param
+# can span multiple folders (i.e., base/this-is/my-query/param)
+RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
